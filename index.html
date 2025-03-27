@@ -47,79 +47,105 @@
       </div>
     </header>
 
-    <section class="hero-section-wrapper">
-      <div class="hero-section-container">
-        <div class="hero-section">
-          <div class="hero-content">
-            <h2>
-              Let's Work <br />
-              Together to Create <br />
-              Wonders with Us
-            </h2>
+    <main>
+      <section class="hero-section-wrapper">
+        <div class="hero-section-container">
+          <div class="hero-section">
+            <div class="hero-content">
+              <h2>
+                Let's Work <br />
+                Together to Create <br />
+                Wonders with Us
+              </h2>
 
-            <p>
-              A visionary creative crafting captivating wonders <br />
-              through art and design. Adept at turning  <br />
-              into extraordinary reality.
-            </p>
+              <p>
+                A visionary creative crafting captivating wonders <br />
+                through art and design. Adept at turning imagination <br />
+                into extraordinary reality.
+              </p>
 
-            <div class="hero-content-btn">
-              <button class="btn-1">Let's Talk</button>
-              <button class="btn-2">Start Project</button>
+              <div class="hero-content-btn">
+                <button class="btn-1">Let's Talk</button>
+                <button class="btn-2">Start Project</button>
+              </div>
+
+              <div class="hero-content-footer">
+                <div class="left">
+                  <h2>15+</h2>
+                  <p>
+                    years <br />
+                    experience
+                  </p>
+                </div>
+                <div class="center">
+                  <h2>26+</h2>
+                  <p>
+                    project <br />
+                    success
+                  </p>
+                </div>
+                <div class="right">
+                  <h2>98%</h2>
+                  <p>
+                    satisfied <br />
+                    rate
+                  </p>
+                </div>
+              </div>
             </div>
+            <div class="hero-image">
+              <img
+                src="https://s3-alpha.figma.com/checkpoints/onE/isO/eZrxnp3Ko6aOOMwW/9762_1103.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWCT3MRUCDU%2F20250323%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250323T120000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=10dad01494cc8feb95ade5fd82b9b1155978dd2ced0941d515ced07a9e0d5fcc"
+                alt="avatar"
+              />
 
-            <div class="hero-content-footer">
-              <div class="left">
-                <h2>15+</h2>
-                <p>
-                  years <br />
-                  experience
-                </p>
-              </div>
-              <div class="center">
-                <h2>26+</h2>
-                <p>
-                  project <br />
-                  success
-                </p>
-              </div>
-              <div class="right">
-                <h2>98%</h2>
-                <p>
-                  satisfied <br />
-                  rate
-                </p>
-              </div>
+              <!-- <div class="image-content-1">
+                          <button>Illustration</button>
+                          <div class="circle">
+                              <i class="fa-solid fa-crow"></i>
+                          </div>
+                      </div>
+                      <div class="image-content-2">
+                          <button>Graphic Design</button>
+                          <div class="circle">
+                              <i class="fa-regular fa-lightbulb"></i>
+                          </div>
+                      </div>
+                      <div class="image-content-3">
+                          <button>creative Branding</button>
+                          <div class="circle">
+                              <i class="fa-solid fa-user-tie"></i>
+                          </div>
+                      </div> -->
             </div>
-          </div>
-          <div class="hero-image">
-            <img
-              src="https://s3-alpha.figma.com/checkpoints/onE/isO/eZrxnp3Ko6aOOMwW/9762_1103.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWCT3MRUCDU%2F20250323%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250323T120000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=10dad01494cc8feb95ade5fd82b9b1155978dd2ced0941d515ced07a9e0d5fcc"
-              alt="avatar"
-            />
-
-            <!-- <div class="image-content-1">
-                        <button>Illustration</button>
-                        <div class="circle">
-                            <i class="fa-solid fa-crow"></i>
-                        </div>
-                    </div>
-                    <div class="image-content-2">
-                        <button>Graphic Design</button>
-                        <div class="circle">
-                            <i class="fa-regular fa-lightbulb"></i>
-                        </div>
-                    </div>
-                    <div class="image-content-3">
-                        <button>creative Branding</button>
-                        <div class="circle">
-                            <i class="fa-solid fa-user-tie"></i>
-                        </div>
-                    </div> -->
           </div>
         </div>
+      </section>
+
+      <section class="services">
+        <div></div>
+      </section>
+    </main>
+    <div id="chatbot-btn">
+      <i class="fa-solid fa-headset"></i>
+  </div>
+
+  <!-- Chatbot container -->
+  <div id="chatbot" class="chatbot-wrapper">
+      <div class="chat-screen">
+          <div class="chat-page-header">
+              <h1 class="chat-page-title">Chatbot</h1>
+                <i class="fa-solid fa-xmark" onclick="closeChatbot()"></i>
+          </div>
+          <div id="chat-area"></div>
+          <div id="user-input">
+              <input type="text" id="user-msg" placeholder="Type your message...">
+              <button onclick="sendMessage()">
+                  <i class="fa-solid fa-paper-plane"></i>
+              </button>
+          </div>
       </div>
-    </section>
+  </div>
 
     <script>
       document
@@ -135,6 +161,43 @@
         .addEventListener("click", function () {
           this.classList.remove("nav-links-active");
         });
+    </script>
+
+    <script>
+      const botResponse =
+        "Thank you for your message! This is a static response.";
+
+      document.getElementById("chatbot-btn").onclick = function () {
+        document.getElementById("chatbot").classList.add("chatbot-active");
+        document.getElementById("chatbot").style.display = "block";
+      };
+
+      function closeChatbot() {
+        document.getElementById("chatbot").style.display = "none";
+      }
+
+      // Function to send a message
+      function sendMessage() {
+        const userMsg = document.getElementById("user-msg").value;
+        if (userMsg.trim() === "") return; 
+
+        const userMessageElement = document.createElement("div");
+        userMessageElement.classList.add("user-message");
+        userMessageElement.textContent = userMsg;
+        document.getElementById("chat-area").appendChild(userMessageElement);
+
+        document.getElementById("user-msg").value = "";
+
+        setTimeout(() => {
+          const botMessageElement = document.createElement("div");
+          botMessageElement.classList.add("bot-message");
+          botMessageElement.textContent = botResponse;
+          document.getElementById("chat-area").appendChild(botMessageElement);
+
+          document.getElementById("chat-area").scrollTop =
+            document.getElementById("chat-area").scrollHeight;
+        }, 1000); 
+      }
     </script>
   </body>
 </html>
