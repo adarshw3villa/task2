@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="icon"
+      href="https://play-lh.googleusercontent.com/gok80TcVqQAfOineDPKn0xONreQ5qh0210cwPUtS3E701ifmSgxkKpq9bDs2wp9EoQ39"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <nav>
+          <div class="left">
+            <i class="fa-solid fa-house"></i>
+            <h1>title</h1>
+          </div>
+          <div id="nav-links" class="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#tour">TOUR</a>
+            <a href="#package">PACKAGE</a>
+            <a href="#contact">CONTACT</a>
+            <button id="nav-links-active" class="book-trip mobile-book">
+              Book Trip
+            </button>
+          </div>
+          <div class="right">
+            <button class="book-trip">Book Trip</button>
+            <i id="hamburger" class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-section-wrapper">
+      <div class="hero-section-container">
+        <div class="hero-section">
+          <div class="hero-content">
+            <h2>
+              Let's Work <br />
+              Together to Create <br />
+              Wonders with Us
+            </h2>
+
+            <p>
+              A visionary creative crafting captivating wonders <br />
+              through art and design. Adept at turning  <br />
+              into extraordinary reality.
+            </p>
+
+            <div class="hero-content-btn">
+              <button class="btn-1">Let's Talk</button>
+              <button class="btn-2">Start Project</button>
+            </div>
+
+            <div class="hero-content-footer">
+              <div class="left">
+                <h2>15+</h2>
+                <p>
+                  years <br />
+                  experience
+                </p>
+              </div>
+              <div class="center">
+                <h2>26+</h2>
+                <p>
+                  project <br />
+                  success
+                </p>
+              </div>
+              <div class="right">
+                <h2>98%</h2>
+                <p>
+                  satisfied <br />
+                  rate
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://s3-alpha.figma.com/checkpoints/onE/isO/eZrxnp3Ko6aOOMwW/9762_1103.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWCT3MRUCDU%2F20250323%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250323T120000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=10dad01494cc8feb95ade5fd82b9b1155978dd2ced0941d515ced07a9e0d5fcc"
+              alt="avatar"
+            />
+
+            <!-- <div class="image-content-1">
+                        <button>Illustration</button>
+                        <div class="circle">
+                            <i class="fa-solid fa-crow"></i>
+                        </div>
+                    </div>
+                    <div class="image-content-2">
+                        <button>Graphic Design</button>
+                        <div class="circle">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <div class="image-content-3">
+                        <button>creative Branding</button>
+                        <div class="circle">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                    </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          document
+            .getElementById("nav-links")
+            .classList.toggle("nav-links-active");
+        });
+
+      document
+        .getElementById("nav-links")
+        .addEventListener("click", function () {
+          this.classList.remove("nav-links-active");
+        });
+    </script>
+  </body>
+</html>
