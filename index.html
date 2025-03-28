@@ -128,24 +128,24 @@
     </main>
     <div id="chatbot-btn">
       <i class="fa-solid fa-headset"></i>
-  </div>
+    </div>
 
-  <!-- Chatbot container -->
-  <div id="chatbot" class="chatbot-wrapper">
+    <!-- Chatbot container -->
+    <div id="chatbot" class="chatbot-wrapper">
       <div class="chat-screen">
-          <div class="chat-page-header">
-              <h1 class="chat-page-title">Chatbot</h1>
-                <i class="fa-solid fa-xmark" onclick="closeChatbot()"></i>
-          </div>
-          <div id="chat-area"></div>
-          <div id="user-input">
-              <input type="text" id="user-msg" placeholder="Type your message...">
-              <button onclick="sendMessage()">
-                  <i class="fa-solid fa-paper-plane"></i>
-              </button>
-          </div>
+        <div class="chat-page-header">
+          <h1 class="chat-page-title">Chatbot</h1>
+          <i class="fa-solid fa-xmark" onclick="closeChatbot()"></i>
+        </div>
+        <div id="chat-area"></div>
+        <div id="user-input">
+          <input type="text" id="user-msg" placeholder="Type your message..." />
+          <button onclick="sendMessage()">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
       </div>
-  </div>
+    </div>
 
     <script>
       document
@@ -179,7 +179,7 @@
       // Function to send a message
       function sendMessage() {
         const userMsg = document.getElementById("user-msg").value;
-        if (userMsg.trim() === "") return; 
+        if (userMsg.trim() === "") return;
 
         const userMessageElement = document.createElement("div");
         userMessageElement.classList.add("user-message");
@@ -196,7 +196,7 @@
 
           document.getElementById("chat-area").scrollTop =
             document.getElementById("chat-area").scrollHeight;
-        }, 1000); 
+        }, 1000);
       }
     </script>
   </body>

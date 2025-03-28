@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
 
   --btncolor: #2980ff;
   --btncolorhover: #1c5fc4;
@@ -158,8 +160,8 @@ header {
   .hero-section-container {
     max-width: 1600px;
     width: 100%;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 2vw;
+    padding-right: 4vw;
 
     .hero-section {
       width: 100%;
@@ -334,8 +336,10 @@ header {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 350px;
-  height: 500px;
+  max-width: 350px;
+  width: 50vw;
+  min-height: 200px;
+  height: 50vh;
   background-color: #f1f1f1;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -359,7 +363,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 1vw;
 }
 
 .chat-page-title {
@@ -371,7 +375,7 @@ header {
 }
 
 #chat-area {
-  height: 350px;
+  height: 70%;
   overflow-y: auto;
   padding: 10px;
   background-color: #fff;
@@ -424,17 +428,91 @@ header {
 /* Chatbot button to activate the chatbot */
 #chatbot-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5vw;
+  right: 5vh;
   background-color: var(--chatbotcolor);
   color: white;
   border-radius: 50%;
   padding: 15px;
-  font-size: 20px;
+  font-size: 2vw;
   cursor: pointer;
   z-index: 999;
 }
 
 #chatbot-btn:hover {
   background-color: var(--chatbotcolor);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  #chatbot {
+    bottom: 10px;
+    right: 10px;
+
+
+  .chat-page-header {
+    font-size: 1vw;
+    padding: 10px;
+  }
+
+  #chat-area {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  #user-input input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  #user-input button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  #chatbot-btn {
+    bottom: 10vw;
+    right: 10vw;
+    font-size: 4vw;
+    padding: 10px;
+  }
+}
+}
+
+/* Media query for very small screens (max-width: 400px) */
+@media screen and (max-width: 400px) {
+  #chatbot {
+    width: 300px;
+    max-height: 90vh;
+    height: 250px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .chat-page-header {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #chat-area {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  #user-input input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  #user-input button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  #chatbot-btn {
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px;
+  }
 }
