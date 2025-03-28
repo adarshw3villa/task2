@@ -28,7 +28,7 @@
         <nav>
           <div class="left">
             <i class="fa-solid fa-house"></i>
-            <h1>title</h1>
+            <h1>UXDN</h1>
           </div>
           <div id="nav-links" class="nav-links">
             <a href="#about">ABOUT</a>
@@ -152,14 +152,14 @@
         .getElementById("hamburger")
         .addEventListener("click", function () {
           document
-            .getElementById("nav-links")
-            .classList.toggle("nav-links-active");
+            .getElementById("nav-links").style.left = 0;
         });
 
       document
         .getElementById("nav-links")
         .addEventListener("click", function () {
-          this.classList.remove("nav-links-active");
+          document
+            .getElementById("nav-links").style.left = "-100%";
         });
     </script>
 
@@ -189,14 +189,27 @@
         document.getElementById("user-msg").value = "";
 
         setTimeout(() => {
-          const botMessageElement = document.createElement("div");
-          botMessageElement.classList.add("bot-message");
-          botMessageElement.textContent = botResponse;
-          document.getElementById("chat-area").appendChild(botMessageElement);
+    const botMessageElement = document.createElement("div");
+    botMessageElement.classList.add("bot-message");
 
-          document.getElementById("chat-area").scrollTop =
-            document.getElementById("chat-area").scrollHeight;
-        }, 1000);
+    // Add bot icon (Font Awesome example)
+    const botIcon = document.createElement("i");
+    botIcon.classList.add("fa-solid", "fa-headset"); // Font Awesome robot icon classes
+
+    // Add bot message text
+    const botText = document.createElement("span");
+    botText.textContent = "Thank you for your message! This is a static response.";
+
+    // Append icon and text to the bot message
+    botMessageElement.appendChild(botIcon);
+    botMessageElement.appendChild(botText);
+
+    document.getElementById("chat-area").appendChild(botMessageElement);
+
+    // Scroll to the bottom of the chat area
+    document.getElementById("chat-area").scrollTop =
+      document.getElementById("chat-area").scrollHeight;
+  }, 1000);
       }
     </script>
   </body>
