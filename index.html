@@ -21,6 +21,17 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </head>
   <body>
     <header>
@@ -94,10 +105,7 @@
               </div>
             </div>
             <div class="hero-image">
-              <img
-                src="https://avatars.githubusercontent.com/u/119832460?v=4"
-                alt="avatar"
-              />
+              <img src="./hero_image.png" alt="avatar" />
 
               <!-- <div class="image-content-1">
                           <button>Illustration</button>
@@ -118,6 +126,33 @@
                           </div>
                       </div> -->
             </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="technology-section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="owl-carousel technology-carousel">
+          <div class="technology-card">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Android App Development" />
+            <h3>Android App Development</h3>
+            <p>We build scalable and user-friendly Android applications tailored to your needs.</p>
+          </div>
+          <div class="technology-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Web App Development" />
+            <h3>Web App Development</h3>
+            <p>Our web apps are designed for performance, scalability, and a seamless user experience.</p>
+          </div>
+          <div class="technology-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Portfolios" />
+            <h3>Portfolios</h3>
+            <p>Showcase your work with stunning and professional portfolio designs.</p>
+          </div>
+          <div class="technology-card">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Landing Page Designs" />
+            <h3>Landing Page Designs</h3>
+            <p>We create high-converting landing pages to boost your business growth.</p>
           </div>
         </div>
       </section>
@@ -151,15 +186,13 @@
       document
         .getElementById("hamburger")
         .addEventListener("click", function () {
-          document
-            .getElementById("nav-links").style.left = 0;
+          document.getElementById("nav-links").style.left = 0;
         });
 
       document
         .getElementById("nav-links")
         .addEventListener("click", function () {
-          document
-            .getElementById("nav-links").style.left = "-100%";
+          document.getElementById("nav-links").style.left = "-100%";
         });
     </script>
 
@@ -189,28 +222,51 @@
         document.getElementById("user-msg").value = "";
 
         setTimeout(() => {
-    const botMessageElement = document.createElement("div");
-    botMessageElement.classList.add("bot-message");
+          const botMessageElement = document.createElement("div");
+          botMessageElement.classList.add("bot-message");
 
-    // Add bot icon (Font Awesome example)
-    const botIcon = document.createElement("i");
-    botIcon.classList.add("fa-solid", "fa-headset"); // Font Awesome robot icon classes
+          // Add bot icon (Font Awesome example)
+          const botIcon = document.createElement("i");
+          botIcon.classList.add("fa-solid", "fa-headset"); // Font Awesome robot icon classes
 
-    // Add bot message text
-    const botText = document.createElement("span");
-    botText.textContent = "Thank you for your message! This is a static response.";
+          // Add bot message text
+          const botText = document.createElement("span");
+          botText.textContent =
+            "Thank you for your message! This is a static response.";
 
-    // Append icon and text to the bot message
-    botMessageElement.appendChild(botIcon);
-    botMessageElement.appendChild(botText);
+          // Append icon and text to the bot message
+          botMessageElement.appendChild(botIcon);
+          botMessageElement.appendChild(botText);
 
-    document.getElementById("chat-area").appendChild(botMessageElement);
+          document.getElementById("chat-area").appendChild(botMessageElement);
 
-    // Scroll to the bottom of the chat area
-    document.getElementById("chat-area").scrollTop =
-      document.getElementById("chat-area").scrollHeight;
-  }, 1000);
+          // Scroll to the bottom of the chat area
+          document.getElementById("chat-area").scrollTop =
+            document.getElementById("chat-area").scrollHeight;
+        }, 1000);
       }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".technology-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
     </script>
   </body>
 </html>
