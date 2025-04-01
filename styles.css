@@ -1,12 +1,11 @@
-
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
- 
+
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "poppins",  sans-serif;
 
   --btncolor: rgba(255, 68, 0, 0.74);
   --btncolorhover: rgba(255, 68, 0, 0.74);
@@ -36,13 +35,12 @@ header {
   justify-content: center;
   position: sticky;
   z-index: 100;
-  top: -10px;
+  top: -22px;
   background-color: white;
   padding-top: 1vh;
   padding-bottom: 1vh;
 
   .navbar {
-    max-width: 1600px;
     width: 100%;
     display: flex;
 
@@ -61,12 +59,8 @@ header {
         display: flex;
         align-items: center;
         column-gap: 20px;
-        i {
-          font-size: clamp(2em, 4vw, 3em);
-        }
-
-        h1 {
-          font-size: clamp(2em, 5vw, 3em);
+        i, h1 {
+          font-size: clamp(1em, 3vw, 2.5em);
         }
       }
 
@@ -96,13 +90,12 @@ header {
           background-color: var(--btncolor);
           border: none;
           border-radius: 3vw;
-          padding-left: 1vw;
-          padding-right: 1vw;
+          padding: clamp(8px, 1vw, 15px) clamp(12px, 2vw, 20px); 
           min-width: fit-content;
-          width: clamp(32px,15vw,170px);
-          height: clamp(13px,4vw,64px);
+          width: clamp(100px, 15vw, 200px);
+          height: clamp(40px, 4vw, 60px); 
           cursor: pointer;
-          font-size: clamp(6px,1.8vw,30px);
+          font-size: clamp(12px, 1.8vw, 20px); 
           color: white;
           font-weight: bold;
           transition: background-color 0.3s ease;
@@ -110,9 +103,7 @@ header {
       }
 
       @media screen and (max-width: 768px) {
-
         z-index: 100;
-        
 
         .right {
           .book-trip {
@@ -133,11 +124,11 @@ header {
           justify-content: space-around;
           position: fixed;
           top: 0;
-          left: -100%; 
+          left: -100%;
           width: 100vw;
           height: 100vh;
           background-color: white;
-          transition: left 1s cubic-bezier(0.38,-0.02, 0, 1.37); 
+          transition: left 1s cubic-bezier(0.38, -0.02, 0, 1.37);
           z-index: 1000;
 
           .mobile-book {
@@ -150,27 +141,23 @@ header {
             cursor: pointer;
             color: white;
             font-weight: bold;
+            font-size: 16px;
             transition: background-color 0.3s ease;
           }
         }
       }
 
       @media screen and (max-width: 328px) {
-
-        
-        
-        .left{
-          font-size: .65em;
+        .left {
+          font-size: 0.65em;
         }
 
-        .nav-links{
+        .nav-links {
           height: max-content;
           padding-top: 5vh;
           gap: 3vh;
           padding-bottom: 4vh;
         }
-        
-
 
         .right {
           i {
@@ -178,7 +165,6 @@ header {
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-size: clamp(1.3em, 2vw, 3em);
-            
           }
         }
       }
@@ -189,20 +175,18 @@ header {
 /* Hero Section */
 
 .hero-section-wrapper {
-
   overflow-x: hidden;
-  margin-left: clamp(20px, 3vw, 40px);
+  /* margin-left: clamp(20px, 3vw, 40px); */
 
   display: flex;
   justify-content: center;
 
-  margin-top: clamp(20px, 3vw, 45px);
+  margin-top: clamp(10px, 1.5vw, 45px);
 
   .hero-section-container {
-    max-width: 1600px;
     width: 100%;
     padding-left: 2vw;
-    padding-right: 4vw;
+    padding-right: 2vw;
 
     .hero-section {
       width: 100%;
@@ -226,19 +210,19 @@ header {
         margin-left: 10%;
         position: relative;
         overflow-y: hidden;
-       
+
         justify-content: space-around;
 
         h2 {
           letter-spacing: clamp(1px, 0.2vw, 2px);
 
-          font-size: clamp(12px,4vw,64px);
+          font-size: clamp(12px, 4vw, 64px);
         }
 
         p {
           letter-spacing: (0.5px, 0.1vw, 2px);
           margin-top: clamp(1rem, 3vw, 3rem);
-          font-size: clamp(6px,1.7vw,30px);
+          font-size: clamp(6px, 1.7vw, 30px);
           line-height: 1;
         }
 
@@ -251,13 +235,12 @@ header {
             background-color: var(--btncolor);
             border: none;
             border-radius: 3vw;
-            padding-left: 1vw;
-            padding-right: 1vw;
+            padding: clamp(8px, 1vw, 15px) clamp(12px, 2vw, 20px); 
             min-width: fit-content;
-            width: clamp(32px,15vw,170px);
-            height: clamp(13px,4vw,64px);
+            width: clamp(100px, 15vw, 200px); 
+            height: clamp(40px, 4vw, 60px); 
             cursor: pointer;
-            font-size: clamp(6px,2vw,32px);
+            font-size: clamp(12px, 1.8vw, 20px); 
             color: white;
             font-weight: bold;
             transition: background-color 0.3s ease;
@@ -265,15 +248,13 @@ header {
 
           .btn-2 {
             background-color: white;
-            padding-left: 1vw;
-            padding-right: 1vw;
             border-radius: 3vw;
+            padding: clamp(8px, 1vw, 15px) clamp(12px, 2vw, 20px); 
             min-width: fit-content;
-            width: clamp(32px,10vw,170px);
-            height: clamp(13px,4vw,64px);
+            width: clamp(100px, 15vw, 200px); 
+            height: clamp(40px, 4vw, 60px); 
             cursor: pointer;
-            font-size:  clamp(5px,1.8vw,30px);
-            width: 5vw;
+            font-size: clamp(12px, 1.8vw, 20px); 
             transition: background-color 0.3s ease;
           }
         }
@@ -307,7 +288,6 @@ header {
       }
 
       @media screen and (max-width: 600px) {
-
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -321,15 +301,14 @@ header {
 
           h2 {
             font-size: 8vw;
-            br{
+            br {
               display: none;
             }
           }
 
           p {
-
             font-size: 5vw;
-            br{
+            br {
               display: none;
             }
           }
@@ -364,7 +343,6 @@ header {
             }
           }
         }
-        
       }
 
       .hero-image {
@@ -379,29 +357,26 @@ header {
           border-radius: 50%;
           object-fit: cover;
         }
-        
       }
     }
   }
 }
 
-
-.technology-section-wrapper{
+.technology-section-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
   overflow-x: hidden;
-  
-  margin-top: 2vh;
-
+  padding-left:5vw;
+  padding-right: 5vw;
+  margin-top: 4vh;
 }
 
 /* Technology Section */
 #technology-section {
-  max-width: 1600px;
   width: 100%;
-  padding: 50px 4vw;
+  padding: 5vh 0;
   text-align: center;
 }
 
@@ -415,56 +390,57 @@ header {
 .technology-carousel {
   display: flex;
   gap: 20px;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
   padding: 10px;
 }
 
 .technology-carousel::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for a cleaner look */
+  display: none;
 }
 
 .technology-card {
-  flex: 0 0 300px; /* Fixed width for cards */
-  height: 400px; /* Fixed height for consistent size */
-  background-color: #f9f9f9; /* Light gray background to match the theme */
-  border-radius: 15px; /* Rounded corners for cards */
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+  flex: 0 0 300px;
+  height: 400px; 
+  background-color: #f9f9f9; 
+  border-radius: 15px; 
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); 
   padding: 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .technology-card:hover {
-  transform: translateY(-10px); 
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
-  background-color: #fdebe3; 
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fdebe3;
 }
 
 .technology-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 10px; 
+  border-radius: 10px;
   margin-bottom: 15px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .technology-card h3 {
   font-size: 1.5rem;
   margin: 15px 0;
-  color: rgba(255, 68, 0, 0.74); 
+  color: rgba(255, 68, 0, 0.74);
   font-weight: bold;
 }
 
 .technology-card p {
   font-size: 1rem;
-  color: #555; 
+  color: #555;
   line-height: 1.5;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 /* Navigation Buttons */
@@ -499,8 +475,11 @@ header {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .technology-section-wrapper{
+    padding-left:2vw;
+  }
   .technology-card {
-    flex: 0 0 250px; 
+    flex: 0 0 250px;
     height: 350px;
   }
 
@@ -510,8 +489,9 @@ header {
 }
 
 @media screen and (max-width: 480px) {
+  
   .technology-card {
-    flex: 0 0 200px; 
+    flex: 0 0 200px;
     height: 300px;
   }
 
@@ -519,6 +499,9 @@ header {
     font-size: 1.8rem;
   }
 }
+
+
+
 
 .chatbot-wrapper {
   display: flex;
@@ -529,20 +512,19 @@ header {
 #chatbot {
   position: fixed;
   bottom: 20px;
+  z-index: 10;
   right: 20px;
-  max-width: 350px;
+  max-width: 550px;
   width: 50vw;
-  min-height: 200px;
-  height: 50vh;
+  max-height: 90vh;
+  height: 550px;
   background-color: #f1f1f1;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-  z-index: 1000; 
-  display: none; 
+  z-index: 1000;
+  display: none;
   overflow: hidden;
 }
-
-
 
 .chat-screen {
   height: 100%;
@@ -551,7 +533,8 @@ header {
 }
 
 .chat-page-header {
-  background-color: var(--chatbotcolor);
+  background: linear-gradient(135deg, #ea761e, #ff9800); /* Gradient for header */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   color: white;
   padding: 15px;
   display: flex;
@@ -566,6 +549,7 @@ header {
 
 .fa-xmark {
   cursor: pointer;
+  font-size: 2vw;
 }
 
 #chat-area {
@@ -574,32 +558,36 @@ header {
   padding: 10px;
   background-color: #fff;
   font-size: 14px;
+
   flex-grow: 1;
 }
 
 #user-input {
   display: flex;
   padding: 10px;
+  gap: 1vw;
   background-color: #f9f9f9;
   border-top: 1px solid #ddd;
+
 }
 
 #user-input input {
-  flex: 1;
-  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 20px;
+  padding: 10px;
+  height: 20px;
+  width: 88%;
   font-size: 14px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 #user-input button {
-  background-color: var(--chatbotcolor);
+  background-color: #ea761e;
   color: white;
+  border-radius: 100%;
   padding: 10px;
-  border: none;
-  border-radius: 50%;
-  margin-left: 10px;
-  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 #user-input button:hover {
@@ -611,10 +599,11 @@ header {
   justify-self: right;
   text-align: left;
   margin-bottom: 10px;
-  background-color: #df762679; 
-  color: #333; 
+  background-color: #df762679;
+  color: #333;
   padding: 10px;
   border-radius: 15px;
+  border-bottom-left-radius:0;
   max-width: 70%;
 }
 
@@ -623,24 +612,28 @@ header {
   align-items: flex-start;
   text-align: left;
   margin-bottom: 10px;
-  background-color: #f1f1f1; 
+  background-color: #f1f1f1;
   color: #333;
   padding: 10px;
   border-radius: 15px;
+  border-bottom-right-radius:0;
   max-width: 70%;
   position: relative;
 }
+.user-message, .bot-message {
+  margin: 10px 15px; /* Add spacing around bubbles */
+}
 
 .bot-message i {
-  width: clamp(20px, 5vw, 30px); 
-  height: clamp(20px, 5vw, 30px); 
+  width: clamp(20px, 5vw, 30px);
+  height: clamp(20px, 5vw, 30px);
   margin-right: 10px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: inline;
   align-items: center;
   justify-content: center;
   color: #333;
-  font-size: clamp(12px, 3vw, 20px); 
+  font-size: clamp(12px, 3vw, 20px);
 }
 
 #chatbot-btn {
@@ -665,71 +658,75 @@ header {
   #chatbot {
     bottom: 10px;
     right: 10px;
-    width: 90vw;
+    height: 400px;
+    width: 350px;
+    border: 2px solid black;
 
-  .chat-page-header {
-    font-size: 1vw;
-    padding: 10px;
-    h1,i{
-      font-size: 18px;
+    .chat-page-header {
+      font-size: 1vw;
+      padding: 10px;
+      h1,
+      i {
+        font-size: 18px;
+      }
+    }
+
+    #chat-area {
+      font-size: 12px;
+      padding: 5px;
+    }
+
+    #user-input input {
+      font-size: 12px;
+      padding: 8px;
+    }
+
+    #user-input button {
+      font-size: 12px;
+      padding: 8px;
+      width: 40px;
+    }
+
+    #chatbot-btn {
+      bottom: 10vw;
+      right: 10vw;
+      font-size: 4vw;
+      padding: 10px;
     }
   }
-
-  #chat-area {
-    font-size: 12px;
-    padding: 5px;
-  }
-
-  #user-input input {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  #user-input button {
-    font-size: 12px;
-    padding: 8px;
-  }
-
-  #chatbot-btn {
-    bottom: 10vw;
-    right: 10vw;
-    font-size: 4vw;
-    padding: 10px;
-  }
-}
 }
 
-/* Media query for very small screens (max-width: 400px) */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   #chatbot {
-    width: 300px;
+    width: 290px;
     max-height: 90vh;
-    height: 250px;
+    height: 450px;
     bottom: 10px;
     right: 10px;
   }
 
   .chat-page-header {
-    font-size: 14px;
+    font-size: 12px;
     padding: 8px;
 
-    h1,i{
+    h1,
+    i {
       font-size: 14px;
     }
   }
 
   #chat-area {
-    font-size: 12px;
+    font-size: 10px;
     padding: 5px;
   }
 
   #user-input input {
-    font-size: 12px;
+    font-size: 10px;
     padding: 6px;
   }
 
   #user-input button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 6px;
   }
 
