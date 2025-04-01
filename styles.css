@@ -1,7 +1,10 @@
+
 html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+ 
   box-sizing: border-box;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
@@ -28,6 +31,7 @@ a {
 /* Header Section */
 
 header {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   position: sticky;
@@ -185,6 +189,8 @@ header {
 /* Hero Section */
 
 .hero-section-wrapper {
+
+  overflow-x: hidden;
   margin-left: clamp(20px, 3vw, 40px);
 
   display: flex;
@@ -385,6 +391,7 @@ header {
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
+  overflow-x: hidden;
   
   margin-top: 2vh;
 
@@ -658,11 +665,14 @@ header {
   #chatbot {
     bottom: 10px;
     right: 10px;
-
+    width: 90vw;
 
   .chat-page-header {
     font-size: 1vw;
     padding: 10px;
+    h1,i{
+      font-size: 18px;
+    }
   }
 
   #chat-area {
@@ -702,6 +712,10 @@ header {
   .chat-page-header {
     font-size: 14px;
     padding: 8px;
+
+    h1,i{
+      font-size: 14px;
+    }
   }
 
   #chat-area {
