@@ -31,7 +31,7 @@ header {
   display: flex;
   justify-content: center;
   position: sticky;
-  z-index: 1;
+  z-index: 100;
   top: -10px;
   background-color: white;
   padding-top: 1vh;
@@ -95,10 +95,10 @@ header {
           padding-left: 1vw;
           padding-right: 1vw;
           min-width: fit-content;
-          width: 10vw;
-          height: 4vw;
+          width: clamp(32px,15vw,170px);
+          height: clamp(13px,4vw,64px);
           cursor: pointer;
-          font-size: 2vw;
+          font-size: clamp(6px,1.8vw,30px);
           color: white;
           font-weight: bold;
           transition: background-color 0.3s ease;
@@ -106,6 +106,8 @@ header {
       }
 
       @media screen and (max-width: 768px) {
+
+        z-index: 100;
         
 
         .right {
@@ -127,16 +129,31 @@ header {
           justify-content: space-around;
           position: fixed;
           top: 0;
-          left: -100%; /* Initially hidden off-screen */
+          left: -100%; 
           width: 100vw;
           height: 100vh;
           background-color: white;
-          transition: left 1s cubic-bezier(0.38,-0.02, 0, 1.37); /* Smooth slide-in animation */
+          transition: left 1s cubic-bezier(0.38,-0.02, 0, 1.37); 
           z-index: 1000;
+
+          .mobile-book {
+            display: block;
+            background-color: var(--btncolor);
+            border: none;
+            border-radius: 3vw;
+            width: 250px;
+            height: 60px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+          }
         }
       }
 
       @media screen and (max-width: 328px) {
+
+        
         
         .left{
           font-size: .65em;
@@ -146,24 +163,10 @@ header {
           height: max-content;
           padding-top: 5vh;
           gap: 3vh;
+          padding-bottom: 4vh;
         }
         
-        .book-trip.mobile-book {
-          display: block;
-          background-color: var(--btncolor);
-          border: none;
-          border-radius: 5vw;
-          padding: 3vw;
-          min-width: fit-content;
-          min-height: fit-content;
-          width: 10vw;
-          height: 4vw;
-          cursor: pointer;
-          font-size: clamp(2em, 2vw, 3em);
-          color: white;
-          font-weight: bold;
-          transition: background-color 0.3s ease;
-        }
+
 
         .right {
           i {
@@ -217,20 +220,19 @@ header {
         margin-left: 10%;
         position: relative;
         overflow-y: hidden;
-        /* align-items: center; */
+       
         justify-content: space-around;
 
         h2 {
-          letter-spacing: (1px, 0.2vw, 2px);
+          letter-spacing: clamp(1px, 0.2vw, 2px);
 
-          font-size: 4vw;
+          font-size: clamp(12px,4vw,64px);
         }
 
         p {
           letter-spacing: (0.5px, 0.1vw, 2px);
           margin-top: clamp(1rem, 3vw, 3rem);
-          /* font-size: clamp(0.4rem, 1vw, 1.15rem); */
-          font-size: 1.7vw;
+          font-size: clamp(6px,1.7vw,30px);
           line-height: 1;
         }
 
@@ -246,10 +248,10 @@ header {
             padding-left: 1vw;
             padding-right: 1vw;
             min-width: fit-content;
-            width: 10vw;
-            height: 4vw;
+            width: clamp(32px,15vw,170px);
+            height: clamp(13px,4vw,64px);
             cursor: pointer;
-            font-size: 2vw;
+            font-size: clamp(6px,2vw,32px);
             color: white;
             font-weight: bold;
             transition: background-color 0.3s ease;
@@ -261,10 +263,10 @@ header {
             padding-right: 1vw;
             border-radius: 3vw;
             min-width: fit-content;
-            width: 10vw;
-            height: 4vw;
+            width: clamp(32px,10vw,170px);
+            height: clamp(13px,4vw,64px);
             cursor: pointer;
-            font-size: 2vw;
+            font-size:  clamp(5px,1.8vw,30px);
             width: 5vw;
             transition: background-color 0.3s ease;
           }
@@ -373,22 +375,26 @@ header {
         }
         
       }
-
-      @media screen and (max-width: 600px) {
-        .hero-image {
-          /* display: none; */
-        }
-        
-      }
     }
   }
 }
 
 
+.technology-section-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  
+  margin-top: 2vh;
+
+}
 
 /* Technology Section */
 #technology-section {
-  padding: 50px 20px;
+  max-width: 1600px;
+  width: 100%;
+  padding: 50px 4vw;
   text-align: center;
 }
 
@@ -426,32 +432,31 @@ header {
 }
 
 .technology-card:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  background-color: #fdebe3; /* Light blue background on hover to match the theme */
-}
+  transform: translateY(-10px); 
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
+  background-color: #fdebe3;
 
 .technology-card img {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  border-radius: 10px; /* Rounded corners for images */
+  border-radius: 10px; 
   margin-bottom: 15px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .technology-card h3 {
   font-size: 1.5rem;
   margin: 15px 0;
-  color: rgba(255, 68, 0, 0.74); /* Dark blue for card titles to match the theme */
+  color: rgba(255, 68, 0, 0.74); 
   font-weight: bold;
 }
 
 .technology-card p {
   font-size: 1rem;
-  color: #555; /* Subtle gray for descriptions */
+  color: #555; 
   line-height: 1.5;
-  margin-top: auto; /* Push the description to the bottom */
+  margin-top: auto; 
 }
 
 /* Navigation Buttons */
@@ -466,7 +471,7 @@ header {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  z-index: 10;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -487,7 +492,7 @@ header {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .technology-card {
-    flex: 0 0 250px; /* Smaller cards for smaller screens */
+    flex: 0 0 250px; 
     height: 350px;
   }
 
@@ -498,7 +503,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .technology-card {
-    flex: 0 0 200px; /* Smaller cards for very small screens */
+    flex: 0 0 200px; 
     height: 300px;
   }
 
@@ -525,7 +530,7 @@ header {
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   z-index: 1000; 
-  display: none; /* Initially hidden */
+  display: none; }
   overflow: hidden;
 }
 
@@ -598,8 +603,8 @@ header {
   justify-self: right;
   text-align: left;
   margin-bottom: 10px;
-  background-color: #df762679; /* Matches the chat screen background */
-  color: #333; /* Dark text for contrast */
+  background-color: #df762679; 
+  color: #333; 
   padding: 10px;
   border-radius: 15px;
   max-width: 70%;
@@ -610,7 +615,7 @@ header {
   align-items: flex-start;
   text-align: left;
   margin-bottom: 10px;
-  background-color: #f1f1f1; /* Light gray for bot messages */
+  background-color: #f1f1f1; 
   color: #333;
   padding: 10px;
   border-radius: 15px;
@@ -619,18 +624,17 @@ header {
 }
 
 .bot-message i {
-  width: clamp(20px, 5vw, 30px); /* Responsive width */
-  height: clamp(20px, 5vw, 30px); /* Responsive height */
+  width: clamp(20px, 5vw, 30px); 
+  height: clamp(20px, 5vw, 30px); 
   margin-right: 10px;
-  border-radius: 50%; /* Makes the icon circular */
+  border-radius: 50%; 
   display: inline;
   align-items: center;
   justify-content: center;
-  color: #333; /* Icon color */
-  font-size: clamp(12px, 3vw, 20px); /* Responsive font size */
+  color: #333;
+  font-size: clamp(12px, 3vw, 20px); 
 }
 
-/* Chatbot button to activate the chatbot */
 #chatbot-btn {
   position: fixed;
   bottom: 5vw;
