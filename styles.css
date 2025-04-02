@@ -74,6 +74,11 @@ header {
         .mobile-book {
           display: none;
         }
+
+        a:hover{
+          color: var(--btncolor);
+          transform: scale(1.1);
+        }
       }
 
       .right {
@@ -143,6 +148,12 @@ header {
             font-weight: bold;
             font-size: 16px;
             transition: background-color 0.3s ease;
+            
+          }
+
+          .mobile-book:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
           }
         }
       }
@@ -180,6 +191,7 @@ header {
 
   display: flex;
   justify-content: center;
+  transition: 1s ease-in-out;
 
   margin-top: clamp(10px, 1.5vw, 45px);
 
@@ -257,7 +269,15 @@ header {
             font-size: clamp(12px, 1.8vw, 20px); 
             transition: background-color 0.3s ease;
           }
+
+          .btn-1:hover, .btn-2:hover{
+            margin-left: 20px;
+            transform: scale(1.1);
+            
+          }
         }
+
+     
 
         .hero-content-footer {
           display: flex;
@@ -363,6 +383,7 @@ header {
 }
 
 .technology-section-wrapper {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -375,6 +396,7 @@ header {
 
 /* Technology Section */
 #technology-section {
+  transition: 1s ease-in-out;
   width: 100%;
   padding: 5vh 0;
   text-align: center;
@@ -647,6 +669,11 @@ header {
   font-size: 2vw;
   cursor: pointer;
   z-index: 999;
+}
+
+#chatbot-btn:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
 }
 
 #chatbot-btn:hover {
