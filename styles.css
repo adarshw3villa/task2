@@ -204,12 +204,13 @@ header {
 /* Hero Section */
 
 .hero-section-wrapper {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* margin-left: clamp(20px, 3vw, 40px); */
 
   display: flex;
   justify-content: center;
-  transition: 1s ease-in-out;
+  transition: .3s ease-in;
+
 
   margin-top: clamp(10px, 1.5vw, 45px);
 
@@ -218,6 +219,7 @@ header {
     width: 100%;
     padding-left: 2vw;
     padding-right: 2vw;
+    scroll-margin-top: 50px; 
 
     .hero-section {
       width: 100%;
@@ -406,6 +408,7 @@ header {
   padding-left: 5vw;
   padding-right: 5vw;
   margin-top: 4em;
+  scroll-margin-top: 80px; 
 }
 
 /* Technology Section */
@@ -415,7 +418,7 @@ header {
   width: 100%;
   padding: 1em 0;
   text-align: center;
-  scroll-margin-top: 80px; 
+
 }
 
 

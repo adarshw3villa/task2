@@ -64,8 +64,8 @@
     </header>
 
     <main>
-      <section id="hero-section" class="hero-section-wrapper">
-        <div class="hero-section-container">
+      <section  class="hero-section-wrapper">
+        <div id="hero-section" class="hero-section-container">
           <div class="hero-section">
             <div class="hero-content">
               <h2>
@@ -239,7 +239,7 @@
             <h3>Quick Links</h3>
             <ul>
               <li><a href="#technology-section">Technologies</a></li>
-              <li><a href="#chatbot">Chatbot</a></li>
+              <li><a href="javascript:void(0);" onclick="chatbotActive()">Chatbot</a></li>
               <li><a href="#hero-section">Home</a></li>
             </ul>
           </div>
@@ -275,6 +275,11 @@
         "Thank you for your message! This is a static response.";
 
       document.getElementById("chatbot-btn").onclick = function () {
+        document.getElementById("chatbot").classList.add("chatbot-active");
+        document.getElementById("chatbot").style.display = "block";
+      };
+
+      function chatbotActive() {
         document.getElementById("chatbot").classList.add("chatbot-active");
         document.getElementById("chatbot").style.display = "block";
       };
