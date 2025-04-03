@@ -45,8 +45,8 @@ header {
   justify-content: center;
   position: sticky;
   z-index: 100;
-  top: -30px;
-  background-color: white;
+  top: -3px;
+  background-color: #333; 
   padding-top: 1vh;
   padding-bottom: 1vh;
 
@@ -54,12 +54,10 @@ header {
     max-width: 2400px;
     width: 100%;
     display: flex;
-    background-color: #333; 
     color: white;
 
     padding-left: 5vw;
     padding-right: 5vw;
-    padding-top: 20px;
 
     nav {
       display: flex;
@@ -84,6 +82,7 @@ header {
         justify-content: center;
         column-gap: 30px;
         width: 50%;
+
 
         .mobile-book {
           display: none;
@@ -147,12 +146,12 @@ header {
           justify-content: space-around;
           position: fixed;
           top: 0;
-          right: -100%;
+          right: -120vw;
           width: 100vw;
           max-height: 100vh;
           gap: 20px;
           padding: 40px 0;
-          background-color: white;
+          background-color: #333;
           transition: right 1s cubic-bezier(0.38, -0.02, 0, 1.37);
           z-index: 1000;
 
@@ -441,6 +440,7 @@ header {
 
 .technology-card {
   flex: 0 0 300px;
+  min-height: fit-content;
   height: 400px;
   background-color: #f9f9f9;
   border-radius: 15px;
@@ -451,7 +451,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
+  background-color 0.3s ease;
   margin: 10px;
 }
 
@@ -554,13 +554,21 @@ header {
 }
 
 .testimonials-section {
-  padding: 50px 20px;
-  text-align: center;
+  
   max-width: 2400px;
   width: 100%;
+
+  .section-title{
+    justify-self: center;
+    margin-bottom: 0;
+  }
 }
 
+
+
 .testimonials-container {
+  padding: 50px 20px;
+  text-align: center;
   display: flex;
   gap: 20px;
   justify-content: center;

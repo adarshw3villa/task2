@@ -48,9 +48,9 @@
             <h1>UXDN</h1>
           </div>
           <div id="nav-links" class="nav-links">
-            <a href="#technology-section">OUR SERVICES</a>
+            <a href="#technology-section"> SERVICES</a>
             <a href="#testimonials-section">TESTIMONIALS</a>
-            <a href="#team-section">OUR TEAM</a>
+            <a href="#team-section"> TEAM</a>
             <button id="nav-links-active" class="book-trip mobile-book">
               Contact Us
             </button>
@@ -220,7 +220,7 @@
         <div id="chat-area"></div>
         <div id="user-input">
           <input type="text" id="user-msg" placeholder="Type your message..." />
-          <button onclick="sendMessage()">
+          <button id="send-msg" onclick="sendMessage()">
             <i class="fa-solid fa-paper-plane"></i>
           </button>
         </div>
@@ -266,7 +266,7 @@
       document
         .getElementById("nav-links")
         .addEventListener("click", function () {
-          document.getElementById("nav-links").style.right = "-100%";
+          document.getElementById("nav-links").style.right = "-120vw";
         });
     </script>
 
@@ -282,6 +282,13 @@
       function closeChatbot() {
         document.getElementById("chatbot").style.display = "none";
       }
+
+      document.getElementById("user-msg").addEventListener("keypress", function (event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault(); 
+          document.getElementById("send-msg").click(); 
+        }
+      });
 
       function sendMessage() {
         const userMsg = document.getElementById("user-msg").value;
@@ -320,7 +327,7 @@
         $(".technology-carousel").owlCarousel({
           loop: true,
           margin: 10,
-          autoPlay: true,
+          autoplay: true,
           autoplayTimeout: 1500,
           autoplayHoverPause: true,
           nav: false,
