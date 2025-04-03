@@ -456,7 +456,7 @@ header {
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
   background-color 0.3s ease;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .technology-card:hover {
